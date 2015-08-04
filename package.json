@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "pm2 start pm2.json"
   },
   "dependencies": {
     "body-parser": "~1.10.2",
@@ -14,7 +14,8 @@
     "lodash": "latest",
     "morgan": "~1.5.1",
     "stylus": "latest",
-    "nib": "latest"
+    "nib": "latest",
+    "js-yaml": "latest"
   },
   "devDependencies": {
     "bower": "latest",
