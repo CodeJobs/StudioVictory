@@ -33,15 +33,15 @@ var nib = require('nib');
 
 // Handlebars setup
 app.engine(config().views.engine, exphbs({
-    extname: config().views.extension,
-    defaultLayout: config().views.layout,
-    layoutsDir: __dirname + '/views/layouts',
-    partialsDir: __dirname + '/views/partials'
+  extname: config().views.extension,
+  defaultLayout: config().views.layout,
+  layoutsDir: __dirname + '/views/layouts',
+  partialsDir: __dirname + '/views/partials'
 }));
 
 // View engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', '.hbs');
+app.set('view engine', config().views.engine);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
