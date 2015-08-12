@@ -1,0 +1,58 @@
+header
+    font('Montserrat')
+    centerWithMargin()
+    width 100%
+
+    .logo
+        centerWithMargin()
+        width 260px
+
+        img
+            centerWithMargin()
+            margin 0
+            margin-top 10px
+            padding 0
+            width 40px
+
+        .logo-text
+            position(absolute, false)
+            color grayColor(3)
+            font-size 2em
+            height 40px
+            line-height 55px
+            margin-left 5px
+    nav
+        margin 0 auto
+        width 70%
+
+        ul
+            margin-top 20px
+            text-align center
+            li
+                display inline-block
+                a
+                    color grayColor(3)
+                    margin-left 15px
+                    text-decoration none
+                    &:hover
+                        border-bottom 1px dotted grayColor(10)
+                        padding-bottom 2px
+
+    .nav-mobile-menu
+        noDisplay()
+        centerWithMargin()
+        margin-top 20px
+        text-align center
+
+        ul
+            resetUl()
+            margin-left -10px
+            li
+                a
+                    color grayColor(3)
+                    line-height 30px
+                    margin-left 15px
+                    text-decoration none
+                    &:hover
+                        border-bottom 1px dotted grayColor(10)
+                        padding-bottom 2px

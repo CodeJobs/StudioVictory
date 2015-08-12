@@ -1,0 +1,80 @@
+.page-content-wrapper
+    centerWithMargin(50px, false, false, 0)
+    width 88%
+
+    .columns
+        prefix(column-count, 3)
+        prefix(column-gap, 10px)
+        prefix(column-fill, auto)
+
+        .post
+            border(grayColor(13))
+            background -webkit-linear-gradient(45deg, white, almostWhite)
+            background white
+            column-break-inside avoid
+            display inline-block
+            margin 0 2px 15px
+            padding 10px
+            padding-bottom 5px
+
+            img
+                margin-bottom 5px
+                padding-bottom 15px
+                width 100%
+            iframe
+                height 250px
+                margin-bottom 5px
+                padding-bottom 15px
+                width 100%
+            h2
+                font-size 1.7rem
+                margin-bottom 10px
+                a
+                    color grayColor(3)
+                    text-decoration none
+                    &:hover
+                        border-bottom 1px dotted grayColor(12)
+            p
+                color grayColor(3)
+                font 0.7rem / 1.1rem Arial, sans-serif
+                margin 0
+
+            .details
+                color grayColor(12)
+                margin-top 20px
+                font-weight fontWeightNormal
+
+                .date
+                    float left
+
+                .social
+                    margin-left 10px
+
+                    a
+                        color grayColor(12)
+                        text-decoration none
+
+                        &.facebook
+                            &:hover
+                                color blueFacebook
+                        &.twitter
+                            &:hover
+                                color blueTwitter
+                        &.linkedin
+                            &:hover
+                                color blueLinkedin
+                        &.google
+                            &:hover
+                                color redGooglePlus
+
+                .category
+                    float right
+
+                    a
+                        color grayColor(12)
+                        text-decoration none
+                        &:hover
+                            color grayColor(6)
+                        &.angular
+                            &:hover
+                                color redAngular

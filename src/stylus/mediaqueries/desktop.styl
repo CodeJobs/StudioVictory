@@ -1,0 +1,24 @@
+@import '../mixins/_responsive'
+
+@media only screen and (max-width: 940px)
+    changeColumns(2)
+
+@media only screen and (max-width: 768px)
+    changeColumns(2)
+
+    header
+        nav
+            noDisplay()
+
+        .nav-mobile
+            centerWithMargin(0, 30px)
+            display block
+            text-align center
+
+            i
+                color grayColor(3)
+                font-size 24px
+
+@media only screen and (max-width: 568px)
+    changeColumns(1)
+

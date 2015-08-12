@@ -9,7 +9,9 @@ production: &default
     layout: main
   html:
     minify: true
-    stylusPrecompile: true
+    css:
+      compress: true
+      stylusPrecompile: true
   controllers:
     default: home
   languages:
@@ -29,4 +31,6 @@ development:
   baseUrl: http://local.studiovictory.com
   html:
     minify: false
-    stylusPrecompile: false
+    css:
+      compress: false
+      stylusPrecompile: false

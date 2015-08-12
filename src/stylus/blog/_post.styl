@@ -1,0 +1,56 @@
+.post-content
+    centerWithMargin(0, false, false, 40px)
+    width 90%
+
+    h1
+        font-size 2.5rem
+        margin 20px
+        text-align center
+
+    h2
+        font-size 2rem
+        margin 20px
+        margin-left 5%
+
+    .meta
+        color grayColor(6)
+        font-style italic
+        margin-bottom 20px
+        text-align center
+
+    .main-image
+        centerWithMargin(0, false, false, 20px)
+        display block
+        width 90%
+
+    p
+        centerWithMargin()
+        font-size 1.1rem
+        line-height 2.2rem
+        padding-bottom 10px
+        width 90%
+        a
+            color grayColor(6)
+            font-weight bold
+            text-decoration none
+            &:hover
+                padding-bottom 2px
+                border-bottom 1px dotted grayColor(12)
+        img
+            width 100%
+
+    ul
+        margin-left 5%
+        li
+            list-style none
+            ul
+                margin-left -20px
+                li
+                    &:before
+                        color grayColor(6)
+
+            &:before
+                font-family 'FontAwesome'
+                content '\f0da'
+                margin 0 5px 0 -15px
+                color grayColor(3)

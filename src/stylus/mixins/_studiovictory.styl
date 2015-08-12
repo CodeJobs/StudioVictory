@@ -1,0 +1,37 @@
+/* Logo */
+$displayLogo()
+    border-right 1px solid $lightGray
+    font-size 26px
+    line-height 49px
+    margin 0 auto
+    margin-left 10px
+    padding-right 10px
+    text-transform uppercase
+    width 175px
+
+    a
+        $noSelect()
+
+    .code
+        color $grayCodejobs
+        display inline-block
+        vertical-align middle
+
+    .jobs
+        color $blueCodejobs
+        display inline-block
+        font-weight $fontWeightBold
+        vertical-align middle
+
+    .isotipo
+        display inline-block
+        height 25px
+        vertical-align middle
+        width 35px
+
+    &:hover
+        .code
+            color $blueCodejobs
+
+        .jobs
+            color $grayCodejobs

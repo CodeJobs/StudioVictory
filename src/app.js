@@ -32,6 +32,22 @@ var exphbs = require('express-handlebars');
 var stylus = require('stylus');
 var nib = require('nib');
 
+// Compile Stylus on the fly
+if (!config().html.css.stylusPrecompile) {
+  app.use(
+    stylus.middleware({
+      src: __dirname + '/stylus',
+      dest: __dirname + '/public/css',
+      compile: function(str, path) {
+        return stylus(str)
+                .set('filename', path)
+                .set('compress', config().html.css.compress)
+                .set(nib());
+      }
+    })
+  );
+}
+
 // Handlebars setup
 app.engine(config().views.engine, exphbs({
   extname: config().views.extension,

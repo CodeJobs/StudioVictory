@@ -1,0 +1,39 @@
+.pagination
+    font('sans-serif', 12px)
+    color grayColor(6)
+    line-height 24px
+    padding 20px
+    margin-bottom 20px
+    text-align center
+
+    .page
+        borderRadius(3px)
+        background grayColor(14)
+        border solid 1px grayColor(13)
+        box-shadow inset 0px 1px 0px rgba(255, 255, 255, .8), 0px 1px 3px rgba(0, 0, 0, .1)
+        color grayColor(7)
+        display inline-block
+        font-size .875em
+        font-weight fontWeightBold
+        margin-right 4px
+        padding 0px 9px
+        text-decoration none
+        text-shadow 0px 1px 0px rgba(255, 255, 255, 1)
+
+        &.active
+            background grayColor(6)
+            border none
+            box-shadow inset 0px 0px 8px rgba(0, 0, 0, .5), 0px 1px 0px rgba(255, 255, 255, .8)
+            color almostWhite
+            text-shadow 0px 0px 3px rgba(0, 0, 0, .5)
+
+        &.gradient
+            background -moz-linear-gradient(0% 0% 270deg,#f8f8f8, #e9e9e9)
+            background -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f8f8f8), to(#e9e9e9))
+
+        &:hover,
+        &.gradient
+            &:hover
+                background almostWhite
+                background -webkit-gradient(linear, 0% 0%, 0% 100%, from(grayColor(14)), to(almostWhite))
+                background -moz-linear-gradient(0% 0% 270deg, grayColor(14), almostWhite)
