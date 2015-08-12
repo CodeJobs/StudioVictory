@@ -30,7 +30,6 @@ var exphbs = require('express-handlebars');
 
 // Stylus setup
 var stylus = require('stylus');
-var nib = require('nib');
 
 // Compile Stylus on the fly
 if (!config().html.css.stylusPrecompile) {
@@ -41,8 +40,7 @@ if (!config().html.css.stylusPrecompile) {
       compile: function(str, path) {
         return stylus(str)
                 .set('filename', path)
-                .set('compress', config().html.css.compress)
-                .set(nib());
+                .set('compress', config().html.css.compress);
       }
     })
   );

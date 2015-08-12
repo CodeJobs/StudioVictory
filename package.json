@@ -21,7 +21,6 @@
     "lodash": "latest",
     "morgan": "~1.5.1",
     "stylus": "latest",
-    "nib": "latest",
     "js-yaml": "latest"
   },
   "devDependencies": {
