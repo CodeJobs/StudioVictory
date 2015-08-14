@@ -1,0 +1,9 @@
+---
+foo: &default
+  a: foo
+  b: bar
+  c: baz
+
+bar:
+  <<: *default
+  c: zab

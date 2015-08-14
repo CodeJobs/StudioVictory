@@ -25,10 +25,24 @@
   },
   "devDependencies": {
     "bower": "latest",
+    "chai": "latest",
     "grunt": "latest",
     "grunt-contrib-jshint": "latest",
-    "grunt-jscs": "latest",
+    "grunt-contrib-stylus": "latest",
     "grunt-githooks": "latest",
-    "grunt-shell": "latest"
+    "grunt-jscs": "latest",
+    "grunt-karma": "latest",
+    "grunt-mocha-test": "latest",
+    "grunt-shell": "latest",
+    "karma": "latest",
+    "karma-chai": "latest",
+    "karma-html2js-preprocessor": "latest",
+    "karma-mocha": "latest",
+    "karma-mocha-reporter": "latest",
+    "karma-phantomjs-launcher": "latest",
+    "karma-sinon": "latest",
+    "mocha": "latest",
+    "rewire": "latest",
+    "sinon": "latest"
   }
 }

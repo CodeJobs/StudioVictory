@@ -1,6 +1,6 @@
 ---
 production: &default
-  serverPort: 9898
+  serverPort: 3000
   baseUrl: http://www.studiovictory.com
   baseApi: /api/
   views:
