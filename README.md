@@ -16,23 +16,23 @@
   
   For Mac:
 
-    NOKOGIRI_USE_SYSTEM_LIBRARIES=1 vagrant plugin install vagrant-berkshelf vagrant-omnibus vagrant-vbguest
+    `NOKOGIRI_USE_SYSTEM_LIBRARIES=1 vagrant plugin install vagrant-berkshelf vagrant-omnibus vagrant-vbguest`
 
   For Windows:
 
-    vagrant plugin install vagrant-berkshelf vagrant-omnibus vagrant-vbguest
+    `vagrant plugin install vagrant-berkshelf vagrant-omnibus vagrant-vbguest`
 
 7. Install global dependencies:
 
-    npm install -g grunt-cli bower pm2 stylus
+    `npm install -g grunt-cli bower pm2 stylus`
 
 8. Install local dependencies:
 
-    npm install
+    `npm install`
 
 9. Spin up your Vagrant VM:
 
-    vagrant up
+    `vagrant up`
 
 ## Grunt Tasks
 `grunt --help` lists available tasks.
