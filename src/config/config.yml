@@ -16,7 +16,9 @@ production: &default
     default: home
   languages:
     default: en
-    list: [en, es, fr, pt, jp]
+    list: [en, es]
+  security:
+    secret: stud10v1ct0ry.com
 
 stage: &stage
   <<: *default

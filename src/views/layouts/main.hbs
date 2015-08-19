@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ __.site.language }}">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-language" content="{{ __.site.language }}" />
+        <meta name="title" content="{{ __.site.title }}" />
+        <meta name="keywords" content="{{ __.site.meta.keywords }}" />
+        <meta name="abstract" content="{{ __.site.meta.abstract }}" />
+        <meta name="description" content="{{ __.site.meta.description }}" />
 
-        <title>StudioVictory.com</title>
+        <title>{{ __.site.title }}</title>
 
-        <link href="/css/style.css" rel="stylesheet" />
+        {{#if isMobile}}
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{/if}}
+
+        {{#css}}
+            <link href="{{ this }}" rel="stylesheet" />
+        {{/css}}
+
         <link rel="shortcut icon" href="images/layout/favicon.png">
     </head>
 

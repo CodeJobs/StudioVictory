@@ -59,38 +59,16 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', config().views.engine);
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Routes
-var home = require('./routes/home');
-var users = require('./routes/users');
-
-app.use('/', home);
-app.use('/users', users);
-
-// catch 404 and forward to error handler
+// Sending config to templates
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+  res.locals.config = config();
+  next();
 });
 
-// error handlers
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
+// Disabling x-powered-by
+app.disable('x-powered-by');
 
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
-});
+require('./router')(app);
 
 // Export application or start the server
 if (!!module.parent) {
