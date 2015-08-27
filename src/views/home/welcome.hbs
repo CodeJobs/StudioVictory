@@ -1,1 +1,7 @@
-<h1>Welcome to {{ siteName }}</h1>
+<h1>{{ __.welcome }} {{ siteName }}</h1>
+
+<p>
+    {{ __.visited }} {{ visits }} {{#is visits 1 }} {{ __.time }} {{else}} {{ __.times }} {{/is}}
+</p>
+
+{{#debug visits }}{{/debug}}

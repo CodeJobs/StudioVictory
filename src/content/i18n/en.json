@@ -7,5 +7,9 @@
       "description": "Learn to code",
       "keywords": "HTML5, JavaScript, Node.js"
     }
-  }
+  },
+  "welcome": "Welcome to",
+  "visited": "You have visited this site",
+  "time": "time",
+  "times": "times"
 }

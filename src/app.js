@@ -23,10 +23,14 @@ app.use(logger('dev'));
 
 // Cookies / Session
 var cookieParser = require('cookie-parser');
+var session = require('./lib/helpers/session');
+
 app.use(cookieParser());
+app.use(session);
 
 // Layout setup
 var exphbs = require('express-handlebars');
+var hbsHelpers = require('./lib/helpers/handlebars');
 
 // Stylus setup
 var stylus = require('stylus');
@@ -51,7 +55,8 @@ app.engine(config().views.engine, exphbs({
   extname: config().views.extension,
   defaultLayout: config().views.layout,
   layoutsDir: __dirname + '/views/layouts',
-  partialsDir: __dirname + '/views/partials'
+  partialsDir: __dirname + '/views/partials',
+  helpers: hbsHelpers
 }));
 
 // View engine setup

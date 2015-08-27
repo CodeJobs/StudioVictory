@@ -19,6 +19,12 @@ production: &default
     list: [en, es]
   security:
     secret: stud10v1ct0ry.com
+  session:
+    cookieDomain: .studiovictory.com
+    maxAge: 86400
+    cookiePrefix: 'svSession_'
+    path: '/'
+    httpOnly: true
 
 stage: &stage
   <<: *default
